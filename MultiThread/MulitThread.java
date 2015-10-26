@@ -6,9 +6,9 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -20,8 +20,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-
-import static java.lang.Thread.*;
 
 public class MultiThread extends AppCompatActivity {
     ProgressBar progress;
@@ -88,10 +86,10 @@ public class MultiThread extends AppCompatActivity {
         progress.setProgress(0);
     }
     class Write implements Runnable {
-        Context context;
+        Context context = MultiThread.this;
 
         public void run() {
-            File file = new File(context.getFilesDir(), "numbers.txt");
+//            File file  = new File(context.getFilesDir(), "numbers.txt");
             String numbers;
 
             try
@@ -133,7 +131,7 @@ public class MultiThread extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            int temp = progress.getProgress();
+                            int temp = 2 * progress.getProgress();
                             progress.setProgress(temp + 1);
                         }
                     });
