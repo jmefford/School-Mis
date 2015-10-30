@@ -1,0 +1,40 @@
+body {
+   background-color: #2F3B76;
+   color: aliceblue;
+}
+
+header {
+   text-align: left;
+   font-family: verdana;
+   font-size: 30px;
+}
+
+form {
+   position: static;
+   text-align: left;
+   border: 0px;
+   padding: 0px;
+}
+
+span {
+   position: relative;
+}
+
+blockquote {
+   position: relative;
+}
+
+#Total {
+   background-color: #2F3B76;
+   color: aliceblue;
+   border: 0px;
+}
+
+img {
+   position: absolute;
+   left: 280px;
+   top: -10px;
+   height: 100px;
+   width: 100px;
+   border: 0px;
+}
