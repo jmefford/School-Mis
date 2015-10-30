@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+   <title>Order Form</title>
+   <link rel="stylesheet" type="text/css" href="main.css">
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <script type="text/javascript" src="myScript.js"></script>
+</head>
+
+   <body onload="">
+      
+      <header>Order Form</header>
+      
+      <div>
+         <form id="buy" action="">
+            <hr />
+            <span>First Name:</span>
+            <input type="text" name="contact" id="First"/>
+            <br /> <br />
+            <span>Last Name:</span>
+            <input type="text" name="contact"  id="Last"/>
+            <br /> <br />
+            <span>Address:</span>
+            <textarea name="contact" id="Address" rows="3" ></textarea>
+            <br /> <br />
+            <span>Phone: </span> 
+            <input type="text" name="contact" placeholder="XXX-XXX-XXXX" id="Phone"/>
+            <br />
+            <blockquote>
+               <span onmouseover="changeLuke()" onmouseout="changeBack()">
+                  <input type="checkbox" name="buy" id="Luke" onclick="calcTotal(440)" />
+                  Luke Skywalker's Lightsaber - $440
+                  <br />
+               </span>
+               <span onmouseover="changeVader()" onmouseout="changeBack()">
+                  <input type="checkbox" name="buy" id="Vader" onclick="calcTotal(575)" />
+                  Darth Vader's Lightsaber - $575
+                  <br />
+               </span>
+               <span onmouseover="changeObi()" onmouseout="changeBack()">
+                  <input type="checkbox" name="buy" id="Obi" onclick="calcTotal(489)" />
+                  Obi Wan Kenobi Lightsaber - $489
+                  <br />
+               </span>
+               <span onmouseover="changeSidious()" onmouseout="changeBack()">
+                  <input type="checkbox" name="buy" id="Sidious" onclick="calcTotal(639)" />
+                  Darth Sidious' Lightsaber - $639
+                  <br />
+               </span>
+               <br />
+               Total = $
+               <input type="text" name="buy" id="Total" readonly value="0.00" />
+               <img src="lightsaber.jpe" id="pic" />
+            </blockquote>
+            <input type="radio" name="CardType" value="MasterCard" />
+            MasterCard
+            <input type="radio" name="CardType" value="Visa" />
+            Visa
+            <input type="radio" name="CardType" value="American Express" />
+            American Express
+            <br />
+            Credit Card Number: 
+            <input type="text" name="Card" 
+                   placeholder="XXXXXXXXXXXXXXXX" maxlength="16" cols="17" />
+            <br /> <br />
+            Month
+            <input type="number" name="Card" id="month" min="1" max="12" /> 
+            Year
+            <input type="number" name="Card" id="year" min="2015" />
+            <br /> <br /> <hr /> 
+            <input type="button" value="Submit" onclick="checkValues()" /> 
+            <input type="reset" value="Reset" onclick="reset()" />
+         </form>
+      </div>
+      
+      <p id="test"></p>
+            
+   </body>
+   
+</html>
